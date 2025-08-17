@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom';
 import Footer from '../Footer/Footer';
+import logo from '../assets/images/logo-BfNap0Pe.png';
 
 export default function Layout() {
   const links = [
@@ -13,7 +14,7 @@ export default function Layout() {
     <div className="flex flex-col min-h-screen">
       <div className="flex flex-1">
         <aside className="bg-gray-50 h-full px-2 w-[242px]">
-          <img src="./src/assets/images/logo-BfNap0Pe.png" className="w-full py-5 pt-3" alt="logo" />
+          <img src={logo} className="w-full py-5 pt-3" alt="logo" />
           <div className="links flex flex-col space-y-2 gap-2">
             {links.map((link) => (
               <NavLink key={link.path} to={link.path} end={link.path === "/"}
